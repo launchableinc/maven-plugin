@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>parent</artifactId>
+    <groupId>com.launchableinc.client</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <groupId>test</groupId>
+  <artifactId>test</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <defaultGoal>install</defaultGoal>
+    <plugins>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.19.1</version><!-- should be consistent with "surefire.version" in ../pom.xml -->
+      </plugin>
+      <plugin>
+        <!-- "mvn io.takari:maven:wrapper" to generate Maven wrapper -->
+        <groupId>io.takari</groupId>
+        <artifactId>maven</artifactId>
+        <version>0.7.7</version>
+        <configuration>
+          <maven>3.3.9</maven><!-- should be consistent with "maven.version" in ../pom.xml -->
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
